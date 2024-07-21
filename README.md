@@ -1,8 +1,8 @@
 # JoSAA SQL Interface
 
-This is a browser based **SQL Interface** for JoSAA Opening and Closing Rank [data](https://josaa.nic.in/or-cr/), which allows several different ways to explore and analyze using **SQL** queries.
+This is a browser based **SQL Interface** for JoSAA Opening and Closing Rank [data](https://josaa.nic.in/or-cr/), which allows you to explore and analyze using **SQL** queries.
 
-Try [here](https://pardhavmaradani.github.io/josaa-sql-interface).
+Try [here](https://pardhavmaradani.github.io/josaa-sql-interface/).
 
 The database consists of Opening and Closing rank details of all institutes (IITs, NITs, IIITs and GFTIs) that take part in JoSAA for all academic programs and all categories for the years shown below:
 
@@ -57,5 +57,12 @@ $
 
 ## Analyze
 
-- Click [here](https://pardhavmaradani.github.io/josaa-sql-interface) to analyze this database in your browser
+- Click [here](https://pardhavmaradani.github.io/josaa-sql-interface/) to analyze this database in your browser
+- Note that it could take a few seconds to download the DB and show the results
+- The web interface should look something like this:
 
+![JoSAA SQL Web Interface](images/josaa-sql-interface-sample1.png)
+
+- Enter your **SQL** commands in the textarea and click on the `Execute` button to see the results.
+
+![JoSAA SQL Web Interface Example](images/josaa-sql-interface-sample2.png)
