@@ -58,7 +58,7 @@ $
 ## Analyze
 
 - Click [here](https://pardhavmaradani.github.io/josaa-sql-interface/) to analyze this database in your browser
-- Note that it could take a few seconds to download the DB and show the results
+  - Note that it could take a few seconds/minutes to download the DB and show the results depending on your internet speed (The DB file is ~19MB)
 - The web interface should look something like this:
 
 ![JoSAA SQL Web Interface](images/josaa-sql-interface-sample1.png)
