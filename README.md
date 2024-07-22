@@ -2,11 +2,28 @@
 
 This is a browser based **SQL Interface** for JoSAA Opening and Closing Rank [data](https://josaa.nic.in/or-cr/), which allows you to explore and analyze using **SQL** queries.
 
-Try [here](https://pardhavmaradani.github.io/josaa-sql-interface/).
+## Analyze
 
-The database consists of Opening and Closing rank details of all institutes (IITs, NITs, IIITs and GFTIs) that take part in JoSAA for all academic programs and all categories for the years shown below:
+- Click [here](https://pardhavmaradani.github.io/josaa-sql-interface/) to analyze this data in your browser
+  - The Anaysis URL is https://pardhavmaradani.github.io/josaa-sql-interface/
+  - > Note that for the very first time, it could take a few seconds / minutes to download the database and set it up depending on your internet speed (The database file is ~19MB)
+  - All queries work locally in your browser after that
+- The web interface should look something like this:
 
-  - 2024 - rounds 1 through 5
+![JoSAA SQL Web Interface](images/josaa-sql-interface-sample1.png)
+
+- Enter your **SQL** commands in the textarea and click on the `Execute` button or `Ctrl-Enter` to see the results.
+
+![JoSAA SQL Web Interface Example](images/josaa-sql-interface-sample2.png)
+
+- The `db/josaa-2016-2024-all.db` file can be downloaded and analyzed locally using `sqlite` as well
+- All the CSV's of the data are available separately in the `csv` folder and can be analyzed in any spreadsheet tool
+
+## About the data
+
+- The database consists of Opening and Closing rank details of all institutes (IITs, NITs, IIITs and GFTIs) that take part in JoSAA for all academic programs and all categories for the years shown below:
+
+  - 2024 - rounds 1 through 5 (final)
   - 2023 - final round 6
   - 2022 - final round 6
   - 2021 - final round 6
@@ -16,9 +33,9 @@ The database consists of Opening and Closing rank details of all institutes (IIT
   - 2017 - final round 7
   - 2016 - final round 6
 
-All the CSV files used for creating the DB were exported using the [josaa-export-csv](https://github.com/PardhavMaradani/josaa-export-csv) Chrome Browser Extension.
+- All the CSV files used for creating the DB were exported using the [josaa-export-csv](https://github.com/PardhavMaradani/josaa-export-csv) Chrome Browser Extension.
 
-The DB file was created as shown below:
+- The DB file was created as shown below:
 
 ```
 $ sqlite3
@@ -50,19 +67,12 @@ sqlite>
 $
 ```
 
+- [sql.js](https://github.com/sql-js/sql.js) was used to create the SQL Web Interface
+
+## Running locally
+
 - To run a local version:
   - Clone this repo
   - Start a local server in the cloned folder using: `$ ./start_local_server.py`
   - Open `http://localhost:8081/` in your browser
 
-## Analyze
-
-- Click [here](https://pardhavmaradani.github.io/josaa-sql-interface/) to analyze this database in your browser
-  - Note that it could take a few seconds/minutes to download the DB and show the results depending on your internet speed (The DB file is ~19MB)
-- The web interface should look something like this:
-
-![JoSAA SQL Web Interface](images/josaa-sql-interface-sample1.png)
-
-- Enter your **SQL** commands in the textarea and click on the `Execute` button to see the results.
-
-![JoSAA SQL Web Interface Example](images/josaa-sql-interface-sample2.png)
