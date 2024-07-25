@@ -76,3 +76,30 @@ $
   - Start a local server in the cloned folder using: `$ ./start_local_server.py`
   - Open `http://localhost:8081/` in your browser
 
+## Writing / Generating SQL Queries
+
+Here is the `schema` of the single table in this SQLite database:
+
+```
+CREATE TABLE data(year TEXT, round TEXT, type TEXT, institute TEXT, program TEXT, quota TEXT, category TEXT, gender TEXT, orank NUMBER, crank NUMBER);
+```
+
+Here are the first few rows of this table:
+
+```
+SELECT * FROM data LIMIT 5;
+```
+
+```
+┌──────┬───────┬──────┬────────────────────────────────────────────┬─────────────────────────────────────────────────────┬───────┬──────────┬────────────────┬───────┬───────┐
+│ year │ round │ type │                 institute                  │                       program                       │ quota │ category │     gender     │ orank │ crank │
+├──────┼───────┼──────┼────────────────────────────────────────────┼─────────────────────────────────────────────────────┼───────┼──────────┼────────────────┼───────┼───────┤
+│ 2024 │ 1     │ IIT  │ Indian Institute of Technology Bhubaneswar │ Civil Engineering (4 Years, Bachelor of Technology) │ AI    │ OPEN     │ Gender-Neutral │ 9106  │ 13018 │
+│ 2024 │ 1     │ IIT  │ Indian Institute of Technology Bhubaneswar │ Civil Engineering (4 Years, Bachelor of Technology) │ AI    │ OPEN     │ Female-only    │ 18286 │ 20788 │
+│ 2024 │ 1     │ IIT  │ Indian Institute of Technology Bhubaneswar │ Civil Engineering (4 Years, Bachelor of Technology) │ AI    │ EWS      │ Gender-Neutral │ 1755  │ 1975  │
+│ 2024 │ 1     │ IIT  │ Indian Institute of Technology Bhubaneswar │ Civil Engineering (4 Years, Bachelor of Technology) │ AI    │ EWS      │ Female-only    │ 3122  │ 3308  │
+│ 2024 │ 1     │ IIT  │ Indian Institute of Technology Bhubaneswar │ Civil Engineering (4 Years, Bachelor of Technology) │ AI    │ OBC-NCL  │ Gender-Neutral │ 3573  │ 4796  │
+└──────┴───────┴──────┴────────────────────────────────────────────┴─────────────────────────────────────────────────────┴───────┴──────────┴────────────────┴───────┴───────┘
+```
+
+Any SQL query that works against an SQLite database should work.  For those unfamiliar with SQL, an option would be to use [ChatGPT](https://chatgpt.com) to generate SQL queries as described in the [neet-2024-center-marks](https://github.com/PardhavMaradani/neet-2024-center-marks) repo.
